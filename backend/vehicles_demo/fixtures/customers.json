@@ -1,0 +1,24 @@
+[
+    {
+        "fields": {
+            "name": "Kalles Grustransporter AB",
+            "address": "Cementvägen 8, 111 11 Södertälje"
+        },
+        "model": "vehicles.customer",
+        "pk": 1
+    }, {
+        "fields": {
+            "name": "Johans Bulk AB",
+            "address": "Balkvägen 12, 222 22 Stockholm"
+        },
+        "model": "vehicles.customer",
+        "pk": 2
+    }, {
+        "fields": {
+            "name": "Haralds Värdetransporter AB",
+            "address": "Budgetvägen 1, 333 33 Uppsala"
+        },
+        "model": "vehicles.customer",
+        "pk": 3
+    }
+]

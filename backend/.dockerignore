@@ -1,0 +1,8 @@
+.idea
+cmd
+.tags*
+.venv/
+.env/
+venv/
+env/
+*.py[cod]

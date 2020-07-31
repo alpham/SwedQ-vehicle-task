@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+
+  frontend:
+      build: frontend/
+      image: swedq_frontend
+      ports:
+        - 4200:4200
+      volumes:
+          - ./frontend/:/app
+      links:
+        - backend
+      environment:
+        - ENV=development
+        - PORT=4200
+      command: sh -c 'npm install; ./docker/run.sh;'
+
+  backend: &backend_def
+      build: backend/
+      image: swedq_backend
+      ports:
+        - 5000:5000
+      volumes:
+        - ./backend/:/app
+      environment:
+        - DJANGO_SETTINGS_MODULE=vehicles_demo.settings.dev
+        - CELERY_BROKER_URL=redis://redis:6379
+        - CELERY_RESULT_BACKEND=redis://redis:6379
+        - ENV=development
+        - RANDOM_VEHICLE_STATUS=True
+        - PORT=5000
+      links:
+        - redis
+      command: sh -c 'pip install -r requirements.txt; ./docker/prepare_data.sh; ./docker/run.sh;'
+        
+  redis:
+      image: redis:5.0
+
+  celery-worker: 
+    <<: *backend_def
+    command: sh -c "pip install -r requirements.txt; ./docker/celery_worker.sh"
+    ports: []
+
+  celery-beat:
+    <<: *backend_def
+    command: sh -c "pip install -r requirements.txt; ./docker/celery_beat.sh"
+    links:
+      - redis
+      - celery-worker
+    ports: []
+    

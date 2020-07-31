@@ -1,0 +1,59 @@
+[
+    {
+        "fields": {
+            "vin": "YS2R4X20005399401",
+            "reg_no": "ABC123",
+            "customer": 1    
+        },
+        "model": "vehicles.vehicles",
+        "pk": 1
+    }, {
+        "fields": {
+            "vin": "VLUR4X20009093588",
+            "reg_no": "DEF456",
+            "customer": 1
+        },
+        "model": "vehicles.vehicles",
+        "pk": 2
+    }, {
+        "fields": {
+            "vin": "VLUR4X20009048066",
+            "reg_no": "GHI789",
+            "customer": 1
+        },
+        "model": "vehicles.vehicles",
+        "pk": 3
+    },{
+        "fields": {
+            "vin": "YS2R4X20005388011",
+            "reg_no": "JKL012",
+            "customer": 2    
+        },
+        "model": "vehicles.vehicles",
+        "pk": 4
+    }, {
+        "fields": {
+            "vin": "YS2R4X20005387949",
+            "reg_no": "MNO345",
+            "customer": 2
+        },
+        "model": "vehicles.vehicles",
+        "pk": 5
+    }, {
+        "fields": {
+            "vin": "YS2R4X20005387765",
+            "reg_no": "PQR678",
+            "customer": 3
+        },
+        "model": "vehicles.vehicles",
+        "pk": 6
+    }, {
+        "fields": {
+            "vin": "YS2R4X20005387055",
+            "reg_no": "STU901",
+            "customer": 3
+        },
+        "model": "vehicles.vehicles",
+        "pk": 7
+    }
+]
