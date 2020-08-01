@@ -8,6 +8,13 @@
 */env/
 *.py[cod]
 
+# runtime files
+celerybeat.pid
+celerybeat-schedule
+
+# development db
+db.sqlite3
+
 
 # compiled output
 */dist
